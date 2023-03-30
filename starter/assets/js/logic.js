@@ -14,16 +14,19 @@ start.addEventListener("click", question);{
 
 document.querySelector("#start").addEventListener("click", func1);
 
-// hides start screen
+// hides start screen + starts timer
 function func1() {
+    setTime()
+    questionOne();
+
     document.getElementById("start").innerHTML = "Clicked";
     document.getElementById("start-screen").style.display = "none";
     // document.getElementById("start").innerHTML = "Start";
 }
 
-//timer
+//Timer of the game
 var timeEl = document.getElementById("time")
-var timerCount = 60;
+var timerCount = 45;
 
 function setTime() {
     // Sets interval in variable
@@ -41,7 +44,27 @@ function setTime() {
     }, 1000);
   }
 
-setTime();
+var q1 = document.getElementById("question-title");
+var choices = document.getElementById("choices");
+
+function questionOne () {
+    // document.createElement(q1);
+    // q1.textContent = ("Hello");
+    // console.log(question[0])
+    // q1.setAttribute("data-letter", q1)
+    q1.textContent = question[0];
+    document.body.append(q1);
+    choices.textContent = question[0];
+    // document.createElement("button");
+    // para.innerText =
+    choices.setAttribute = (choices, ".button")
+    // choices.classList.add("button");
+    document.body.append(choices);
+}
+questionOne();
+
 function sendMessage() {
     console.log("End Game");
+    
+    document.getElementById("end-screen").style.display = "contents";
 }
