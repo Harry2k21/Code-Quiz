@@ -1,4 +1,7 @@
-var question = [
-    {"How do you write a for loop?"},
-    {"Which is the lanaguage that adds logic to an application"}
-]
+document.addEventListener('clcik');{
+    console.log("Start");
+}
+
+if('#start' == true){
+    display(question1)
+}
